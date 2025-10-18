@@ -1,0 +1,231 @@
+header{
+display:flex;
+justify-content:space-between;
+align-items: center;
+background-color:#1e88e5;
+color:white;
+}
+.logobox{
+    display: flex;
+  align-items: center;
+    
+}
+.logo{
+    height:50px;
+    margin-right: 10px;
+}
+.appname{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.navbar{
+    margin-left:0px;
+}
+.navbar a{
+     margin-left:30px ;
+     color:white;
+     text-decoration: none;
+     padding:10px;
+}
+.navbar a:hover{
+    border:1px solid white;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s ease, border 0.3s ease;
+}
+#main section
+.hero {
+  text-align: center;
+  margin: 30px auto;
+}
+
+.hero h1 {
+  font-size: 2.5rem;          /* Big, prominent heading */
+  font-weight: bold;           /* Makes it stand out */
+  color: #1e3a8a;             /* Dark blue for contrast with background */
+  margin-bottom: 20px;         /* Space below heading */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean modern font */
+  text-transform: uppercase;    /* Optional: all caps for impact */
+  letter-spacing: 1px;     
+       /* Slight spacing for elegance */
+       text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+
+}
+
+.slides {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.slide {
+  width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.slide:hover {
+  transform: scale(1.05);
+}
+
+.slide img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.caption {
+  padding: 10px;
+  background-color: #f5f5f5;
+  color:rgb(12, 12, 97);
+}
+#Search section
+.search {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.search input {
+  padding: 10px;
+  width: 250px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.search button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1e88e5;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search button:hover {
+  background-color: #1565c0;
+}
+.search h2{
+    font-weight: bold;           
+  color: #1e3a8a;             
+  margin-bottom: 20px;         
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  text-transform: uppercase;    
+  letter-spacing: 1px;     
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+#Featured section
+.featured {
+  text-align: center;
+  padding: 20px;
+}
+.featured h2{
+  font-weight: bold;           
+  color: #1e3a8a;             
+  margin-bottom: 20px;         
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  text-transform: uppercase;    
+  letter-spacing: 1px;     
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+.news-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.news-card {
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  overflow: hidden;
+  background: white;
+}
+
+.news-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.news-card .content {
+  padding: 10px;
+  text-align: left;
+}
+
+#categories section
+.categories {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.categories h2 {
+  font-weight: bold;           
+  color: #1e3a8a;             
+  margin-bottom: 20px;         
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  text-transform: uppercase;    
+  letter-spacing: 1px;     
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.category-buttons {
+  margin-bottom: 30px;
+}
+
+.category-buttons button {
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  border: none;
+  background-color: #1e88e5;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.category-buttons button:hover {
+  background-color: #1565c0;
+}
+
+
+#categoryResults {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+
+
+#About section
+.about {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+  line-height: 1.6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.about h2, .about h3 {
+  color: #1e3a8a;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.about p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+
+

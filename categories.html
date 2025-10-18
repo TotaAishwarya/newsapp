@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News App - Categories</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <header>
+        <div class="logobox">
+            <img src="images/Logo.png" alt="News App Logo" class="logo">
+            <span class="appname">News App</span>
+        </div>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="categories.html">Categories</a>
+            <a href="search.html">Search</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+
+    
+    <main>
+        <section class="categories">
+            <h2>News Categories</h2>
+            <div class="category-buttons">
+                <button onclick="fetchCategory('business')">Business</button>
+                <button onclick="fetchCategory('technology')">Technology</button>
+                <button onclick="fetchCategory('sports')">Sports</button>
+                <button onclick="fetchCategory('health')">Health</button>
+                <button onclick="fetchCategory('entertainment')">Entertainment</button>
+            </div>
+            <div id="categoryResults" class="news-grid"></div>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

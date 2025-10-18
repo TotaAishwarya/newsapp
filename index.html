@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News App</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logobox">
+      <img src="images/Logo.png" alt="News App Logo" class="logo">
+      <span class="appname">News App</span>
+      </div>
+      <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="categories.html">Categories</a>
+        <a href="search.html">Search</a>
+        <a href="about.html">About</a>
+      </nav>
+    </header>
+    <main>
+    <section class="hero">
+  <h1>Top Headlines Today</h1>
+  <div class="slides">
+    <div class="slide">
+      <img src="images/slide1.jpg" alt="Breaking News 1">
+      <div class="caption">Global Economy Sees Unexpected Growth</div>
+    </div>
+    <div class="slide">
+      <img src="images/slide2.jpg" alt="Breaking News 2">
+      <div class="caption">New Technology Revolutionizing Healthcare</div>
+    </div>
+    <div class="slide">
+      <img src="images/slide3.jpg" alt="Breaking News 2">
+      <div class="caption">New Technology Revolutionizing Healthcare</div>
+    </div>
+  </div>
+</section>
+<section class="search">
+  <h2>Search for News</h2>
+  <input type="text" id="searchInput" placeholder="Enter a topic...">
+  <button id="searchBtn">Search</button>
+  <div id="searchResults"></div>
+</section>
+
+<section class="featured">
+  <h2>Latest News</h2>
+  <div id="newsContainer" class="news-grid"></div>
+</section>
+
+
+    </main>
+
+</body>
+</html>
