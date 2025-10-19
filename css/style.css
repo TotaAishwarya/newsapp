@@ -228,4 +228,56 @@ color:white;
 }
 
 
+#footer section
+footer {
+  background-color: #1e88e5;
+  color: white;
+  padding: 20px 10px;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+.footercontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footerleft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footerlogo {
+  height: 40px;
+}
+
+.footerappname {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+ .footer-right {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* space between items */
+  align-items: center;
+  justify-content: center; /* center horizontally */
+}
+.footerright p {
+  margin: 5px 0;
+}
+
+.footerright a {
+  color: white;
+  text-decoration: none;
+  margin: 0 5px;
+  
+}
+
+.footerright a:hover {
+  text-decoration: underline;
+}
