@@ -1,0 +1,1 @@
+This is a simple web application that makes use of html, css and javascript and Newsapi . It fetches news from different parts of the world . It allows you to search for a particular country or from a particular source and language. 
