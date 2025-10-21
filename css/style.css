@@ -40,15 +40,15 @@ color:white;
 }
 
 .hero h1 {
-  font-size: 2.5rem;          /* Big, prominent heading */
-  font-weight: bold;           /* Makes it stand out */
-  color: #1e3a8a;             /* Dark blue for contrast with background */
-  margin-bottom: 20px;         /* Space below heading */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean modern font */
-  text-transform: uppercase;    /* Optional: all caps for impact */
+  font-size: 2.5rem;          
+  font-weight: bold;           
+  color: #1e3a8a;             
+  margin-bottom: 20px;         
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  text-transform: uppercase;    
   letter-spacing: 1px;     
-       /* Slight spacing for elegance */
-       text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+      
+text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
 
 }
 
@@ -117,6 +117,22 @@ color:white;
   letter-spacing: 1px;     
   text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
 }
+.filters {
+  margin-bottom: 20px;
+}
+
+.filters label {
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+.filters select {
+  margin-right: 15px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
 
 #Featured section
 .featured {
@@ -263,9 +279,9 @@ footer {
  .footer-right {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px; /* space between items */
+  gap: 10px; 
   align-items: center;
-  justify-content: center; /* center horizontally */
+  justify-content: center; 
 }
 .footerright p {
   margin: 5px 0;

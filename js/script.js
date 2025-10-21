@@ -58,26 +58,55 @@ if (newsContainer) fetchTopHeadlines();
 const searchBtn = document.getElementById("searchBtn");
 const searchInput = document.getElementById("searchInput");
 const searchResults = document.getElementById("searchResults");
+const countrySelect = document.getElementById("countrySelect");
+const sourceSelect = document.getElementById("sourceSelect");
+const languageSelect = document.getElementById("languageSelect");
+
+
 
 if (searchBtn) {
   searchBtn.addEventListener("click", () => {
     const query = searchInput.value.trim();
-    if (query) fetchNewsByQuery(query);
+    const country = countrySelect ? countrySelect.value : "";
+    const source = sourceSelect ? sourceSelect.value : "";
+    const language = languageSelect ? languageSelect.value : "";
+
+    fetchNewsByFilters(query, country, source,language);
   });
 }
 
-async function fetchNewsByQuery(query) {
-  const url = `https://newsapi.org/v2/everything?q=${encodeURIComponent(query)}&apiKey=${apiKey}`;
+async function fetchNewsByFilters(query, country, source,language) {
+ 
+  let url = `https://newsapi.org/v2/top-headlines?apiKey=${apiKey}`;
+
+  
+  if (query) url += `&q=${encodeURIComponent(query)}`;
+  if (source) url += `&sources=${source}`;
+  else if (country) url += `&country=${country}`;
+  if (language) url += `&language=${language}`;
+
   if (searchResults) searchResults.innerHTML = "<p>Loading...</p>";
 
   try {
     const response = await fetch(url);
+
+    
+    if (!response.ok) {
+      if (response.status === 401)
+        throw new Error("Invalid API key. Please check your credentials.");
+      if (response.status === 429)
+        throw new Error("API request limit reached. Please try again later.");
+      if (response.status >= 500)
+        throw new Error("Server error. Please try again in a moment.");
+      throw new Error("Failed to fetch news.");
+    }
+
     const data = await response.json();
 
     searchResults.innerHTML = "";
 
     if (!data.articles || data.articles.length === 0) {
-      searchResults.innerHTML = "<p>No results found.</p>";
+      searchResults.innerHTML = "<p>No results found for your search.</p>";
       return;
     }
 
@@ -88,7 +117,7 @@ async function fetchNewsByQuery(query) {
         <img src="${article.urlToImage || 'images/default.jpg'}" alt="${article.title}">
         <div class="content">
           <h3>${article.title}</h3>
-          <p>${article.description || ''}</p>
+          <p>${article.description || 'No description available.'}</p>
           <a href="${article.url}" target="_blank">Read More</a>
         </div>
       `;
@@ -96,8 +125,8 @@ async function fetchNewsByQuery(query) {
     });
 
   } catch (error) {
-    searchResults.innerHTML = `<p style="color:red;">Failed to fetch search results.</p>`;
-    console.error("Error fetching search results:", error);
+    searchResults.innerHTML = `<p style="color:red;">${error.message}</p>`;
+    console.error("Error fetching news:", error);
   }
 }
 
